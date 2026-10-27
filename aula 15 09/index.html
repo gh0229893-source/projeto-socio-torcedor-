@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Consulta - Cadastro de Pacientes</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topo">
+      <div class="container topo-conteudo">
+        <img src="img/santos fc.png" alt="Logo do site" class="logo-site" />
+        <div class="titulo-topo">
+          <h1>✚ Santos FC👑</h1>
+          <p>Sistema cadastro socio torcedor </p>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="painel">
+        <p>Preencha os dados para cadastrar o torcedor .</p>
+
+        <form id="formPaciente" novalidate>
+          <label for="nome">Nome completo:</label>
+          <input type="text" id="nome" name="nome" required />
+
+          <label for="endereco">Endereço:</label>
+          <input type="text" id="endereco" name="endereco" required />
+
+          <label for="telefone">Telefone:</label>
+          <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999" required />
+
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="nacionalidade">Nacionalidade:</label>
+          <input type="text" id="nacionalidade" name="nacionalidade" required />
+
+          <label for="naturalidade">Naturalidade (cidade/UF):</label>
+          <input type="text" id="naturalidade" name="naturalidade" required />
+
+          <label for="foto">Foto do documento:</label>
+          <input type="file" id="foto" name="foto" accept="image/*" />
+          <img id="previewFoto" alt="Prévia da foto do documento" />
+
+          <p id="mensagem" aria-live="polite"></p>
+
+          <div class="acoes">
+            <button type="submit">Salvar cadastro</button>
+            <button type="reset" class="secundario">Limpar formulário</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="painel">
+        <h2>Torcedores cadastrados</h2>
+        <div id="listaPacientes">Nenhum torcedor cadastrado.</div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Consulta | Projeto educacional de HTML5, CSS3 e JavaScript</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
